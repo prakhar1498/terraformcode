@@ -24,5 +24,3 @@ variable "computer_name"     {}
 variable "allocation_method" {}
 variable "ip_version"        {}
 variable "keyvault_name"     {}
-variable "vnet" {}
-variable "subnet" {}
