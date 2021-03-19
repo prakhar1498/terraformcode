@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "rg" {
 resource "azurerm_virtual_machine" "vm" {
   name                               = "${var.stack_name}"
   location                           = "${var.location}"
-  resource_group_name                = "${var.rg_name}"
+  resource_group_name                = azurerm_resource_group.rg.name
   network_interface_ids              = ["${azurerm_network_interface.ni.id}"]
   vm_size                            = "${var.vm_size}"
   delete_os_disk_on_termination      = true
@@ -44,7 +44,7 @@ resource "azurerm_virtual_machine" "vm" {
 resource "azurerm_public_ip" "public"   {
   name                               = "${var.stack_name}-ip"
   location                           = "${var.location}"
-  resource_group_name                = "${var.rg_name}"
+  resource_group_name                = azurerm_resource_group.rg.name
   allocation_method                  = "${var.allocation_method}"
   ip_version                         = "${var.ip_version}"
   tags = {
