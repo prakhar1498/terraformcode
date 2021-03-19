@@ -14,10 +14,6 @@ provider "azurerm" {
 }
 variable "rg_name"           {}
 variable "location"          {}
-variable "subscription_id"   {}
-variable "client_id"         {}
-variable "client_secret"     {}
-variable "tenant_id"         {}
 variable "stack_name"        {}
 variable "vm_size"           {}
 variable "instance_admin"    {}
