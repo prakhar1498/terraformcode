@@ -5,6 +5,14 @@ terraform {
       version = "=2.46.0"
     }
   }
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "infraautomation"
+    
+    workspaces {
+      name = "infraautomation"
+      }
+  }  
 }
 
 provider "azurerm" {
