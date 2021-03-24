@@ -15,6 +15,11 @@ terraform {
   }  
 }
 
+# .terraformrc
+credentials "app.terraform.io" {
+  token = "yboKr56qzwqKXQ.atlasv1.BNJMUh1rxmlGw1zMn5ylt8RzYVF1Jzm2opDzALApXr0FDolKramy8yIOOgAnaFTHJVE"
+}
+
 provider "azurerm" {
    features {}
    
